@@ -3,16 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AJMF Foundation</title>
+    <title>Anish Jadhav Memorial Foundation</title>
 
     <link rel="stylesheet" href="mission.css">
 
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+       <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
-
-<body>
-
+   
     <!---  HEADER  --->
 
     <header class="header">
@@ -28,7 +30,12 @@
                 </div>
             </div>
 
-       <nav class="navbar">
+            <!-- 1. HAMBURGER ICON (YAHAN ADD KIYA HAI - Mobile view ke liye 3 lines) -->
+        <div class="hamburger-menu" id="hamburgerBtn">
+            <i class="fa-solid fa-bars"></i>
+        </div>
+
+       <nav class="navbar" id="navMenu">
     <ul>
 
     <!-- HOME -->
@@ -90,12 +97,19 @@
 
 </ul>
 
-</nav>
+<!-- Apply Here button mobile menu ke andar bhi access ho payega -->
 
-            <a href="https://admissions.navgurukul.org/students/" class="donate-btn">
+            <a href="https://admissions.navgurukul.org/students/" class="donate-btn mobile-only-btn">
                 <i class="fa-solid fa-heart"></i>
                 Apply Here
-            </a>
+            </a>          
+</nav>
+
+<!-- Desktop Apply Button -->
+        <a href="https://admissions.navgurukul.org/students/" class="donate-btn desktop-only-btn">
+            <i class="fa-solid fa-heart"></i>
+            Apply Here
+        </a>
 
         </div>
     </header>
@@ -255,56 +269,47 @@
 
         <div class="partner-content">
 
-            <img src="images/anudip.png" alt="Anudip">
-
-            <div>
+            <!-- 1. LEFT SIDE: Text Content (Pehle text aur stat box ayega) -->
+            <div class="partner-text-content">
 
                 <p>
-                    Anudip Foundation is our valued partner
-                    in driving skill development initiatives.
+                    In 2019, Anish Jadhav Memorial Foundation partnered with the <b>Anudip Foundation</b> to address the employability crisis directly.
+                    Our goal was to bridge the gap between education and employment for those who needed it most.
                 </p>
 
-                <ul>
-                    <li>Skill Development</li>
-                    <li>Livelihood Creation</li>
-                    <li>Social Empowerment</li>
-                </ul>
+                <!-- STAT BOX (Jaise image me 200+ vala box tha) -->
+                <div class="stat-highlight-box">
+                    <h2>200+</h2>
+                    <p>Underprivileged Youths Trained</p>
+                </div>
+
+                <p>
+                    This initiative resulted in successful placements in the <b>ITeS (Information Technology Enabled Services)</b> and <b>BFSI (Banking, Financial Services and Insurance)</b> sectors in Pune.
+                </p>
+
+            </div>
+
+            <!-- 2. RIGHT SIDE: 3 Photos Collage (Yahan images add kardi hain) -->
+            <div class="initiative-photo-collage">
+
+                <!-- Photo 1 -->
+                <div class="collage-photo photo-1">
+                    <img src="partners1.jpeg" alt="Anudip Group Photo">
+                </div>
+                
+                <!-- Photo 2 -->
+                <div class="collage-photo photo-2">
+                    <img src="partners2.jpeg" alt="Anudip Event">
+                </div>
+                
+                <!-- Photo 3 (Agar 3rd image ho to yahan lagayein, nahi to koi bhi 3rd photo) -->
+                <div class="collage-photo photo-3">
+                    <img src="partners1.jpeg" alt="Anudip Training">
+                </div>
 
             </div>
 
         </div>
-
-    </div>
-
-    <div class="journey-card">
-
-        <span>04</span>
-
-        <h2>Our Journey</h2>
-
-        <ul>
-
-            <li>
-                <strong>2019</strong>
-                Partnership with Anudip Foundation
-            </li>
-
-            <li>
-                <strong>2021</strong>
-                Skill Development Expansion
-            </li>
-
-            <li>
-                <strong>2023</strong>
-                Community Growth
-            </li>
-
-            <li>
-                <strong>2025</strong>
-                School of Programming
-            </li>
-
-        </ul>
 
     </div>
 
@@ -585,6 +590,28 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 
 });
+
+
+        document.addEventListener('DOMContentLoaded', () => {
+    const hamburgerBtn = document.getElementById('hamburgerBtn');
+    const navMenu = document.getElementById('navMenu');
+
+    if (hamburgerBtn && navMenu) {
+        hamburgerBtn.addEventListener('click', () => {
+            navMenu.classList.toggle('is-active');
+
+            // Icon ko ☰ se ✕ mein change karne ke liye
+            const icon = hamburgerBtn.querySelector('i');
+            if (icon) {
+                icon.classList.toggle('fa-bars');
+                icon.classList.toggle('fa-xmark');
+            }
+        });
+    }
+});
+
+
+ 
 </script>
 
 </body>

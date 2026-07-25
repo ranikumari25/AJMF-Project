@@ -26,14 +26,12 @@ ul {
 /* ================= HEADER ================= */
 
 .header{
-    position:sticky;
-    width:100%;
-    top:0;
-    left:0;
-    z-index:100;
-    /* margin: 0 auto; */
-    padding: 20px 0px;
-    background:#0B1F44;
+    position: sticky;
+    top: 0;
+    width: 100%;
+    z-index: 100;
+    background: #0B1F44;
+    padding: 26px 0;   /* pehle 20px tha */
     transition: .35s;
 }
 
@@ -42,25 +40,27 @@ ul {
 }
 
 .header .container{
-    width: 90%;
-    max-width: 1400px;
-    margin: auto;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    width:98%;
+    max-width:1700px;
+    margin:0 auto;
+    display:flex;
+    align-items:center;
+    /* justify-content:space-between; */
 }
 
 .logo-area{
     display:flex;
     align-items:center;
-    gap:15px;
+    gap:16px;
+    margin-left:0px;      /* Left se bas thoda sa space */
+    flex-shrink:0;
 }
 
 .logo-area img{
-    border-radius: 50%;
-    width:100px;
+    width:78px;
+    height:78px;
+    border-radius:50%;
 }
-
 .logo-content h2{
     font-family: 'poppins',sans-serif;
     font-weight: 400;
@@ -76,16 +76,25 @@ ul {
     letter-spacing:2px;
 }
 
+.navbar{
+    flex:1;
+    margin-left:50px;   
+    margin-right:40px;    
+    justify-content:center;
+}
+
 .navbar ul{
     display:flex;
-    gap:40px;
-    align-items: center;
+    align-items:center;
+    justify-content:space-evenly;
+    /* width:700px;       */
+    gap: 28px;;
 }
 
 .navbar ul li a{
     font-family: 'poppins',sans-serif;
     text-decoration: none;
-    font-size: 14px;
+    font-size: 20px;
     align-items: center;
     gap: 3px;     
     font-weight: 500;    
@@ -111,6 +120,7 @@ ul {
     font-family:'Poppins',sans-serif;
     background: #f57c00;
     color:#fff;
+    margin-left: 80px;
     padding:14px 28px;
     border-radius:6px;
     font-weight:600;
@@ -122,9 +132,9 @@ ul {
 /* ================= HERO ================= */
 
 .hero{
-    min-height:100vh;
+    min-height:720px;
     position:relative;
-    padding: 40px 0 80px;
+    padding: 30px 0 40px;
     /* background-position: url("sop.jpeg"); */
   background:linear-gradient(
     to right,
@@ -139,6 +149,7 @@ ul {
     background-size:cover;
     background-position:center;
 }
+
 
 .hero-content{
     margin-top: 20px;
@@ -177,7 +188,7 @@ ul {
 }
 
 .primary-btn{
-     font-family:'Poppins',sans-serif;
+    font-family:'Poppins',sans-serif;
     background: #f57c00;
     color:#fff;
     padding:18px 45px;
@@ -195,34 +206,37 @@ ul {
 
 /* ================= STATS ================= */
 
-.stats-section{
-    margin-top:-170px;
+ .stats-section{
+    margin-top:-110px;
+    margin-bottom: 40px;
     position:relative;
-    z-index:5;
-}
+    z-index:10;
+} 
 
 .stats-grid{
-    display:grid;
-    grid-template-columns:repeat(4,1fr);
-    gap:25px;
+    display:flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    /* grid-template-columns:repeat(4,1fr); */
+    gap:50px;
 }
 
 .stat-card{
+    width:350px;         
+    height:200px;         
+    background:#fff;
+    border-radius:20px;
+    box-shadow:0 8px 20px rgba(0,0,0,.08);
     display:flex;
     align-items:center;
     gap:22px;
-    background:#fff;
-    padding:38px 28px;
-    border-radius:15px;
-    box-shadow:0 12px 30px rgba(0,0,0,.08);
-    text-align:left;
+    padding:20px 22px;
 }
-
 .stat-icon{
-    width:82px;
-    height:82px;
+    width:80px;
+    height:80px;
     border-radius:50%;
-    background:#faf5ee;
+    background:#fdf8f2;
     display:flex;
     justify-content:center;
     align-items:center;
@@ -230,13 +244,13 @@ ul {
 }
 
 .stat-icon i{
+    font-size:30px;
     color:#d97706;
-    font-size:34px;
 }
 
 .stat-content h3{
     font-family:'Playfair Display',serif;
-    font-size:35px;
+    font-size:42px;
     font-weight:700;
     line-height:1;
     color:#111;
@@ -245,9 +259,9 @@ ul {
 
 .stat-content p{
     font-family:'Poppins',sans-serif;
-    font-size:15px;
+    font-size:17px;
     color:#666;
-    margin-bottom:14px;
+    margin-bottom:8px;
 }
 
 .stat-line{
@@ -256,20 +270,13 @@ ul {
     height:3px;
     background:#d97706;
     border-radius:20px;
-}
+} */
 
 /* ABOUT SECTION */
 
 .about-section{
     padding:50px 0 0px;
     background:#ffffff;
-}
-
-
-.container{
-    max-width:100%;
-    margin:auto;
-    padding:0 20px;
 }
 
 
